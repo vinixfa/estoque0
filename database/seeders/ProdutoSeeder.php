@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use app\model\produtos;
 
 class ProdutoSeeder extends Seeder
 {
@@ -14,6 +15,24 @@ class ProdutoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Produtos::create([
+            'nome'         =>   'Teclado',
+            'quantidade'   =>    10,
+            'valor'        =>    260
+        ]);
+        
+        Produtos::create([
+            'nome'         =>   'Mouse',
+            'quantidade'   =>    5,
+            'valor'        =>    150
+        ]);
+
+        Produtos::create([
+            'nome'         =>   'Monitor 29',
+            'quantidade'   =>    20,
+            'valor'        =>    2200
+        ]);
+
+
     }
 }
