@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use app\model\produtos;
+use app\models\Produto;
 
 class ProdutoSeeder extends Seeder
 {
