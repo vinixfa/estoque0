@@ -13,4 +13,7 @@ use App\Http\Controllers\ProdutoController;
 |
 */
 
-Route::get('/produto', [ ProdutoController::class,'index']) -> name ('produto.index');
+Route::get('/produto', [ProdutoController::class, 'index']) ->name ('produto.index');
+
+
+
