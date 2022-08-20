@@ -19,5 +19,6 @@ Route::get('/', function () {
 
 Route::get('/produto', [ProdutoController::class, 'index']);
 
+
 // 
 

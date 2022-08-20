@@ -16,7 +16,7 @@ class ProdutoController extends Controller
     {
         $produtos = Produto::orderBy('nome', 'ASC')->get();
         
-        dd($produtos);
+       // dd($produtos);
     }
 
     /**
