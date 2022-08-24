@@ -1,4 +1,6 @@
-<!-- resources/views/produto.blade.php -->
+
+
+<!-- resources/views/produto_index.blade.php -->
  
 @extends('layouts.app')
  
