@@ -16,7 +16,7 @@ class ProdutoController extends Controller
     {
         $produtos = Produto::orderBy('nome', 'ASC')->get();
         
-        dd($produtos,'teste');
+        dd($produtos);
       
     }
 
@@ -38,7 +38,16 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-       
+     
+
+      $produto = new Produto;
+      $produto->nome        = 'Shampoo';
+      $produto->quantidade  = 10;
+      $produto->valor       = 10;
+      $produto->save();
+
+
+
     }
 
     /**
@@ -49,7 +58,9 @@ class ProdutoController extends Controller
      */
     public function show($id)
     {
-        //
+       // dd('entrou no show');
+       $produto= Produto::find($id);
+       dd($produto);
     }
 
     /**
@@ -70,9 +81,15 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //dd('update');
+        $produto= Produto::find(4);
+        $produto->nome = 'Shampoo Clear Men';
+        $produto->quantidade = 20;
+        $produto->valor = 200;
+        $produto->save();
+       //dd($produto);
     }
 
     /**

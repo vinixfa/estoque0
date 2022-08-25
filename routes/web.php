@@ -17,8 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/produto', [ProdutoController::class, 'index'])-> name('produto.index');
+    // lista de produtos
+Route::get('/produto', [ProdutoController::class, 'index']);
 
+    // exibir produtos
+Route::get('/produto/{id}', [ProdutoController::class, 'show']);
 
-// 
+    //insere / cria um produto [POST]
+Route::get('/produtostore', [ProdutoController::class,'store']);
 
+//alterar produto
+Route::get('/produtoupdate', [ProdutoController::class,'update']);
+
+// excluir produto
+Route::get('/produtodestroy', [ProdutoController::class,'destroy']);
