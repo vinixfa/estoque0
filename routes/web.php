@@ -30,4 +30,4 @@ Route::get('/produtostore', [ProdutoController::class,'store']);
 Route::get('/produtoupdate', [ProdutoController::class,'update']);
 
 // excluir produto
-Route::get('/produtodestroy', [ProdutoController::class,'destroy']);
+Route::get('/produtodestroy/{id}', [ProdutoController::class,'destroy']);

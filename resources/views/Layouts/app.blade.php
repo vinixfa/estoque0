@@ -7,7 +7,7 @@
     </head>
     <body>
         @section('sidebar')
-            This is the master sidebar.
+            Topo do meu sistema.
         @show
  
         <div class="container">

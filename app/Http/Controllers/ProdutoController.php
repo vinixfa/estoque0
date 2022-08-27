@@ -15,9 +15,7 @@ class ProdutoController extends Controller
     public function index()
     {
         $produtos = Produto::orderBy('nome', 'ASC')->get();
-        
-        dd($produtos);
-      
+       return view('produto.produto_index', ['produtos' => $produtos]);
     }
 
     /**
@@ -60,7 +58,9 @@ class ProdutoController extends Controller
     {
        // dd('entrou no show');
        $produto= Produto::find($id);
-       dd($produto);
+      // dd($produto);
+      return view('produto.produto_show', ['produto' => $produto]);
+
     }
 
     /**
@@ -85,9 +85,9 @@ class ProdutoController extends Controller
     {
         //dd('update');
         $produto= Produto::find(4);
-        $produto->nome = 'Shampoo Clear Men';
-        $produto->quantidade = 20;
-        $produto->valor = 200;
+        $produto->nome              = 'Shampoo Clear Men';
+        $produto->quantidade        = 20;
+        $produto->valor             = 200;
         $produto->save();
        //dd($produto);
     }
@@ -100,6 +100,8 @@ class ProdutoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $produto= Produto::find($id);
+        $produto->delete();
+        //dd('teste');
     }
 }
