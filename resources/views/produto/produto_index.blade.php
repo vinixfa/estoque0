@@ -14,8 +14,16 @@
  
 @section('content')
 
+@if (session('status'))
+    <div class=" alert-sucess" role="alert">
+        {{session('status')}}
+    </div>
+
+@endif
+
+
 <a href="{{ url('produto/create')}}"> Criar</a>
-    <p>Conteúdo.</p>
+    <p>Conteúdo</p>
    
 
         <table>
@@ -33,6 +41,7 @@
             <td>{{ $value->quantidade   }}</td>
             <td>{{ $value->valor        }}</td>
             <td><a href="{{ url('produto/' . $value->id)}}"> Visualizar</a></td>
+            <td><a href="{{ url('produto/' . $value->id . '/edit')}}"> Editar</a></td>
         </tr>
 
         @endforeach
