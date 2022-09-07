@@ -13,6 +13,9 @@ use App\Http\Controllers\ProdutoController;
 | contains the "web" middleware group. Now create something great!
 |
 */ 
+
+// CRUD
+
 Route::get('/', function () {
     return view('welcome');
 });
