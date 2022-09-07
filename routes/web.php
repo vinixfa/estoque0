@@ -20,8 +20,13 @@ Route::get('/', function () {
     // lista de produtos
 Route::get('/produto', [ProdutoController::class, 'index']);
 
+
+// create
+Route::get('/produtocreate', [ProdutoController::class,'create']);
+
     // exibir produtos
 Route::get('/produto/{id}', [ProdutoController::class, 'show']);
+
 
     //insere / cria um produto [POST]
 Route::get('/produtostore', [ProdutoController::class,'store']);
