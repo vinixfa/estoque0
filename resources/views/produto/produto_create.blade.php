@@ -22,7 +22,7 @@
    
     {!! Form::open(['url' => 'produto/create']) !!}
     
-    {{ Form::label('nome', 'Nome:')}}<br>
+    {{ Form::label('nome', 'Nome:')}}<br><br>
     {{ Form::text('nome')}}<br>
 
     {{ Form::label('quantidade', 'Quantidade:')}}<br>
