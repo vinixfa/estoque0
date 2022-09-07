@@ -28,7 +28,7 @@
     {{ Form::label('quantidade', 'Quantidade:')}}<br>
     {{ Form::text('quantidade')}}<br>
 
-    {{ Form::label('valor', 'Valor:')}}<br>
+    {{ Form::label('valor', 'Valor:')}}<br><br>
     {{ Form::text('valor')}}<br><br>
 
     {{ Form::submit('Enviar')}}
