@@ -13,6 +13,9 @@ use App\Http\Controllers\ProdutoController;
 | contains the "web" middleware group. Now create something great!
 |
 */ 
+
+// CRUD
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,8 +32,13 @@ Route::get('/produto/create', [ProdutoController::class, 'create'])->name('produ
     //edit
     Route::get('/produto/{id}/edit', [ProdutoController::class, 'edit'])->name('produto.edit');
 
+
+// create
+Route::get('/produtocreate', [ProdutoController::class,'create']);
+
     // exibir produtos
 Route::get('/produto/{id}', [ProdutoController::class, 'show']);
+
 
     //insere / cria um produto [POST]
 Route::get('/produtostore', [ProdutoController::class,'store']);
@@ -42,9 +50,3 @@ Route::get('/produtoupdate', [ProdutoController::class,'update']);
 Route::get('/produtodestroy/{id}', [ProdutoController::class,'destroy']);
 
 Route::put('/produto/{id}',[ProdutoController::class, 'update'])->name('produto.update');
-
-// delete 
-Route::delete('/produto/{id}', [ProdutoController::class,'destroy'])->name('produto.delete');
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

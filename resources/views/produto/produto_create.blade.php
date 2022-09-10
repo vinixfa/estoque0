@@ -8,7 +8,12 @@
  
 @section('sidebar')
     @parent
+
  
+@section('content')
+ 
+   
+
     <p> Produto - create </p>
 @endsection
  
@@ -27,13 +32,13 @@
    
     {!! Form::open(['url' => 'produto/create']) !!}
     
-    {{ Form::label('nome', 'Nome:');}}<br>
+    {{ Form::label('nome', 'Nome:')}}<br><br>
     {{ Form::text('nome')}}<br>
 
-    {{ Form::label('quantidade', 'Quantidade:');}}<br>
+    {{ Form::label('quantidade', 'Quantidade:')}}<br>
     {{ Form::text('quantidade')}}<br>
 
-    {{ Form::label('valor', 'Valor:');}}<br>
+    {{ Form::label('valor', 'Valor:')}}<br><br>
     {{ Form::text('valor')}}<br><br>
 
     {{ Form::submit('Enviar')}}
@@ -41,5 +46,5 @@
 {!! Form::close() !!}
  
 
-  
+       
 @endsection
