@@ -42,3 +42,9 @@ Route::get('/produtoupdate', [ProdutoController::class,'update']);
 Route::get('/produtodestroy/{id}', [ProdutoController::class,'destroy']);
 
 Route::put('/produto/{id}',[ProdutoController::class, 'update'])->name('produto.update');
+
+// delete 
+Route::delete('/produto/{id}', [ProdutoController::class,'destroy'])->name('produto.delete');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
