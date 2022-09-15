@@ -98,13 +98,13 @@ class ProdutoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update($id, Request $request)
     {
         //dd('update');
-        $produto= Produto::find(4);
-        $produto->nome              = 'Shampoo Clear Men';
-        $produto->quantidade        = 20;
-        $produto->valor             = 200;
+        $produto= Produto::find($id);
+        $produto->nome              = $request->nome;
+        $produto->quantidade        = $request->quantidade;
+        $produto->valor             = $request->valor;
         $produto->save();
        //dd($produto);
        return redirect('/produto')->with('status', 'Produto excluido com sucesso!');

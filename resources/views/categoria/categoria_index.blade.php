@@ -9,7 +9,7 @@
 @section('sidebar')
     @parent
  
-    <p> Produto - index</p>
+    <p> categoria - index</p>
 @endsection
  
 @section('content')
@@ -22,27 +22,25 @@
 @endif
 
 
-<a href="{{ url('produto/create')}}"> Criar</a>
+
+<a href="{{ url('categoria/create')}}"> Criar</a>
     <p>Conteúdo</p>
    
 
         <table>
         <tr>
             <th>Nome</th>
-            <th>Quantidade</th>
-            <th>Valor</th>
+        
         </tr>
 
-        @foreach ($produtos as $value)
+        @foreach ($categoria as $value)
         
         <tr>
             <td>{{ $value->nome         }}</td>
-            <td>{{ $value->quantidade   }}</td>
-            <td>{{ $value->valor        }}</td>
-            <td><a href="{{ url('produto/' . $value->id)}}"> Visualizar</a></td>
-            <td><a href="{{ url('produto/' . $value->id . '/edit')}}"> Editar</a></td>
+            <td><a href="{{ url('categoria/' . $value->id)}}"> Visualizar</a></td>
+            <td><a href="{{ url('categoria/' . $value->id . '/edit')}}"> Editar</a></td>
             <td>
-                {!! Form::open(['url' => 'produto/'. $value->id,'method' => 'delete']) !!}       
+                {!! Form::open(['url' => 'categoria/'. $value->id,'method' => 'delete']) !!}       
                 {{ Form::submit('Deletar')}}
                 {!! Form::close() !!}
             </td>

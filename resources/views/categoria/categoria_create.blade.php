@@ -28,17 +28,12 @@
     </div>
    @endif
    
-    {!! Form::open(['url' => 'produto/create']) !!}
+    {!! Form::open(['url' => 'categoria/create']) !!}
     
     {{ Form::label('nome', 'Nome:')}}<br><br>
     {{ Form::text('nome')}}<br>
 
-    {{ Form::label('quantidade', 'Quantidade:')}}<br>
-    {{ Form::text('quantidade')}}<br>
-
-    {{ Form::label('valor', 'Valor:')}}<br><br>
-    {{ Form::text('valor')}}<br><br>
-
+   
     {{ Form::submit('Enviar')}}
 
 {!! Form::close() !!}
