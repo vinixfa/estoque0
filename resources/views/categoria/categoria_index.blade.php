@@ -33,7 +33,7 @@
         
         </tr>
 
-        @foreach ($categoria as $value)
+        @foreach ($categorias as $value)
         
         <tr>
             <td>{{ $value->nome         }}</td>
@@ -47,7 +47,6 @@
         </tr>
 
         @endforeach
-
-       
+<!-- vinicius -->
         </table>
 @endsection
